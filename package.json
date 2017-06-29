@@ -1,6 +1,6 @@
 {
   "name": "bh-mj-small-detail",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Biyaheroes MJML Small Detail Component.",
   "main": "small-detail.js",
   "support": "small-detail.support.js",
@@ -40,6 +40,7 @@
   "homepage": "https://github.com/Biyaheroes/bh-mj-small-detail#readme",
   "dependencies": {
     "babel-runtime": "^6.23.0",
+    "falzy": "^0.20.0",
     "jquery": "^3.2.1",
     "mjml": "^3.3.3",
     "mjml-column": "^3.3.3",

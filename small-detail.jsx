@@ -50,6 +50,7 @@
 
 	@include:
 		{
+			"falzy": "falzy",
 			"MJMLElement": "mjml-core",
 			"React": "react",
 			"Component": "react.Component",
@@ -65,6 +66,7 @@ import React, { Component } from "react";
 import Column from "mjml-column";
 import Table from "mjml-table";
 
+import falzy from "falzy";
 import wichevr from "wichevr";
 
 const tagName = "mj-small-detail";
@@ -78,9 +80,9 @@ const defaultMJMLDefinition = {
 	"attributes": {
 		"padding": "10px 10px 0px 10px",
 		"width": "100%",
-		"title": "Title",
-		"label": "Label",
-		"value": "Value"
+		"title": "",
+		"label": "",
+		"value": ""
 	},
 };
 
@@ -88,6 +90,16 @@ const defaultMJMLDefinition = {
 class SmallDetail extends Component {
 	render( ){
 		const { mjAttribute, width, padding } = this.props;
+
+		let { title, label, value } = this.props;
+
+		title = wichevr( title, label, mjAttribute( "title" ), mjAttribute( "label" ) );
+
+		value = wichevr( value, mjAttribute( "value" ) );
+
+		if( falzy( value ) ){
+			title = "";
+		}
 
 		return ( <Column
 					{ ...this.props }
@@ -109,7 +121,7 @@ class SmallDetail extends Component {
 									"textAlign": "left"
 								} }
 							>
-								{ wichevr( mjAttribute( "title" ), mjAttribute( "label" ) ) }
+								{ title }
 							</th>
 						</tr>
 						<tr>
@@ -122,7 +134,7 @@ class SmallDetail extends Component {
 									"textAlign": "left"
 								} }
 							>
-								{ mjAttribute( "value" ) }
+								{ value }
 							</td>
 						</tr>
 					</Table>
