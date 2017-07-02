@@ -78,6 +78,7 @@ const endingTag = false;
 const defaultMJMLDefinition = {
 	"content": "",
 	"attributes": {
+		"align": "left",
 		"padding": "10px 10px 0px 10px",
 		"width": "100%",
 		"title": "",
@@ -91,7 +92,9 @@ class SmallDetail extends Component {
 	render( ){
 		const { mjAttribute, width, padding } = this.props;
 
-		let { title, label, value } = this.props;
+		let { title, label, value, align } = this.props;
+
+		align = wichevr( align, mjAttribute( "align" ) );
 
 		title = wichevr( title, label, mjAttribute( "title" ), mjAttribute( "label" ) );
 
@@ -106,19 +109,19 @@ class SmallDetail extends Component {
 					width={ wichevr( width, mjAttribute( "width" ) ) }
 				>
 					<Table
+						align={ align }
 						padding={ wichevr( padding, mjAttribute( "padding" ) ) }
 						table-layout="auto"
 						width="auto">
 						<tr>
 							<th
-								align="left"
 								style={ {
 									"padding": "0px 0px 0px 0px",
 									"fontSize": "10.5px",
 									"fontWeight": "500",
 									"letterSpacing": "0.3px",
 									"textTransform": "uppercase",
-									"textAlign": "left"
+									"textAlign": align
 								} }
 							>
 								{ title }
@@ -126,12 +129,11 @@ class SmallDetail extends Component {
 						</tr>
 						<tr>
 							<td
-								align="left"
 								style={ {
 									"padding": "0px 0px 0px 0px",
 									"fontSize": "12px",
 									"letterSpacing": "0.3px",
-									"textAlign": "left"
+									"textAlign": align
 								} }
 							>
 								{ value }
