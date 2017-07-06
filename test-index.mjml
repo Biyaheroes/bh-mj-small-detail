@@ -3,6 +3,7 @@
 		<mj-container>
 			<mj-small-detail title="Hello World" value="This is a normal value" padding="20px 20px 20px 20px" />
 			<mj-small-detail title="Test" value="This is a test" align="center" />
+			<mj-small-detail title="Test" value="This is a test" reverse="true" />
 		</mj-container>
 	</mj-body>
 </mjml>

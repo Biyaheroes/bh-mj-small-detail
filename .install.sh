@@ -1,5 +1,6 @@
 yarn add \
 babel-runtime \
+booleanize \
 falzy \
 jquery \
 mjml \
@@ -43,6 +44,7 @@ webpack-dev-server \
 yargs \
 --dev && \
 bower install \
+booleanize \
 falzy \
 jquery \
 react \

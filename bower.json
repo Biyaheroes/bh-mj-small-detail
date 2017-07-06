@@ -1,6 +1,6 @@
 {
   "name": "bh-mj-small-detail",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Biyaheroes MJML Small Detail Component.",
   "main": "small-detail.deploy.js",
   "support": "small-detail.support.js",
@@ -27,9 +27,10 @@
     "tests"
   ],
   "dependencies": {
+    "booleanize": "^0.1.0",
     "falzy": "^0.20.0",
     "jquery": "^3.2.1",
     "react": "^15.6.1",
-    "wichevr": "^0.10.0"
+    "wichevr": "^0.12.0"
   }
 }

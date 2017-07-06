@@ -50,6 +50,7 @@
 
 	@include:
 		{
+			"booleanize": "booleanize",
 			"falzy": "falzy",
 			"MJMLElement": "mjml-core",
 			"React": "react",
@@ -66,6 +67,7 @@ import React, { Component } from "react";
 import Column from "mjml-column";
 import Table from "mjml-table";
 
+import booleanize from "booleanize";
 import falzy from "falzy";
 import wichevr from "wichevr";
 
@@ -83,7 +85,8 @@ const defaultMJMLDefinition = {
 		"width": "100%",
 		"title": "",
 		"label": "",
-		"value": ""
+		"value": "",
+		"reverse": false
 	},
 };
 
@@ -92,7 +95,7 @@ class SmallDetail extends Component {
 	render( ){
 		const { mjAttribute, width, padding } = this.props;
 
-		let { title, label, value, align } = this.props;
+		let { title, label, value, align, reverse } = this.props;
 
 		align = wichevr( align, mjAttribute( "align" ) );
 
@@ -104,17 +107,9 @@ class SmallDetail extends Component {
 			title = "";
 		}
 
-		return ( <Column
-					{ ...this.props }
-					width={ wichevr( width, mjAttribute( "width" ) ) }
-				>
-					<Table
-						align={ align }
-						padding={ wichevr( padding, mjAttribute( "padding" ) ) }
-						table-layout="auto"
-						width="auto">
-						<tr>
-							<th
+		reverse = booleanize( wichevr( reverse, mjAttribute( "reverse" ) ) );
+
+		let titleComponent = ( <td
 								style={ {
 									"padding": "0px 0px 0px 0px",
 									"fontSize": "10.5px",
@@ -125,19 +120,33 @@ class SmallDetail extends Component {
 								} }
 							>
 								{ title }
-							</th>
-						</tr>
-						<tr>
-							<td
+							</td> );
+
+	 	let valueComponent = ( <td
 								style={ {
 									"padding": "0px 0px 0px 0px",
-									"fontSize": "12px",
+									"fontSize": "12.5px",
 									"letterSpacing": "0.3px",
 									"textAlign": align
 								} }
 							>
 								{ value }
-							</td>
+							</td> );
+
+		return ( <Column
+					width={ wichevr( width, mjAttribute( "width" ) ) }
+				>
+					<Table
+						align={ align }
+						padding={ wichevr( padding, mjAttribute( "padding" ) ) }
+						table-layout="auto"
+						width="auto"
+					>
+						<tr>
+							{ reverse? valueComponent : titleComponent }
+						</tr>
+						<tr>
+							{ reverse? titleComponent : valueComponent }
 						</tr>
 					</Table>
 				</Column> );

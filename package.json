@@ -1,6 +1,6 @@
 {
   "name": "bh-mj-small-detail",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Biyaheroes MJML Small Detail Component.",
   "main": "small-detail.js",
   "support": "small-detail.support.js",
@@ -41,6 +41,7 @@
   "homepage": "https://github.com/Biyaheroes/bh-mj-small-detail#readme",
   "dependencies": {
     "babel-runtime": "^6.23.0",
+    "booleanize": "^0.1.0",
     "falzy": "^0.20.0",
     "jquery": "^3.2.1",
     "mjml": "^3.3.3",
@@ -48,7 +49,7 @@
     "mjml-core": "^3.3.3",
     "mjml-table": "^3.3.3",
     "react": "^15.6.1",
-    "wichevr": "^0.10.0"
+    "wichevr": "^0.12.0"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -71,7 +72,7 @@
     "gulp-sourcemaps": "^2.6.0",
     "gulp-uglify": "^3.0.0",
     "gulp-watch": "^4.3.11",
-    "llamalize": "^0.15.0",
+    "llamalize": "^0.16.0",
     "resolve-url-loader": "^2.1.0",
     "source-map-loader": "^0.2.1",
     "style-loader": "^0.18.2",
