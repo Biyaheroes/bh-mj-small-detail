@@ -80,13 +80,15 @@ const endingTag = false;
 const defaultMJMLDefinition = {
 	"content": "",
 	"attributes": {
-		"align": "left",
-		"padding": "10px 10px 0px 10px",
-		"width": "100%",
 		"title": "",
 		"label": "",
 		"value": "",
-		"reverse": false
+		"align": "left",
+		"width": "100%",
+		"reverse": false,
+		"padding": "10px 10px 0px 10px",
+		"background-color": "white",
+		"foreground-color": "black"
 	},
 };
 
@@ -95,7 +97,15 @@ class SmallDetail extends Component {
 	render( ){
 		const { mjAttribute, width, padding } = this.props;
 
-		let { title, label, value, align, reverse } = this.props;
+		let {
+			title,
+			label,
+			value,
+			align,
+			reverse,
+			backgroundColor,
+			foregroundColor
+		} = this.props;
 
 		align = wichevr( align, mjAttribute( "align" ) );
 
@@ -109,6 +119,10 @@ class SmallDetail extends Component {
 
 		reverse = booleanize( wichevr( reverse, mjAttribute( "reverse" ) ) );
 
+		backgroundColor = wichevr( backgroundColor, mjAttribute( "background-color" ) );
+
+		foregroundColor = wichevr( foregroundColor, mjAttribute( "foreground-color" ) );
+
 		let titleComponent = ( <td
 								style={ {
 									"padding": "0px 0px 0px 0px",
@@ -116,7 +130,8 @@ class SmallDetail extends Component {
 									"fontWeight": "500",
 									"letterSpacing": "0.3px",
 									"textTransform": "uppercase",
-									"textAlign": align
+									"textAlign": align,
+									"color": foregroundColor
 								} }
 							>
 								{ title }
@@ -127,7 +142,8 @@ class SmallDetail extends Component {
 									"padding": "0px 0px 0px 0px",
 									"fontSize": "12.5px",
 									"letterSpacing": "0.3px",
-									"textAlign": align
+									"textAlign": align,
+									"color": foregroundColor
 								} }
 							>
 								{ value }
@@ -135,6 +151,7 @@ class SmallDetail extends Component {
 
 		return ( <Column
 					width={ wichevr( width, mjAttribute( "width" ) ) }
+					background-color={ backgroundColor }
 				>
 					<Table
 						align={ align }

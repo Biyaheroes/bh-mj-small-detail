@@ -2,8 +2,12 @@
 	<mj-body>
 		<mj-container>
 			<mj-small-detail title="Hello World" value="This is a normal value" padding="20px 20px 20px 20px" />
+
 			<mj-small-detail title="Test" value="This is a test" align="center" />
+
 			<mj-small-detail title="Test" value="This is a test" reverse="true" />
+
+			<mj-small-detail title="Test" value="This is a test" foreground-color="white" background-color="#227ee5" />
 		</mj-container>
 	</mj-body>
 </mjml>
