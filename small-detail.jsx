@@ -62,8 +62,10 @@
 	@end-include
 */
 
-import { MJMLElement } from "mjml-core";
 import React, { Component } from "react";
+
+import { MJMLElement } from "mjml-core";
+
 import Column from "mjml-column";
 import Table from "mjml-table";
 
@@ -89,7 +91,7 @@ const defaultMJMLDefinition = {
 		"padding": "10px 10px 0px 10px",
 		"background-color": "white",
 		"foreground-color": "black"
-	},
+	}
 };
 
 @MJMLElement
@@ -107,8 +109,6 @@ class SmallDetail extends Component {
 			foregroundColor
 		} = this.props;
 
-		align = wichevr( align, mjAttribute( "align" ) );
-
 		title = wichevr( title, label, mjAttribute( "title" ), mjAttribute( "label" ) );
 
 		value = wichevr( value, mjAttribute( "value" ) );
@@ -116,6 +116,8 @@ class SmallDetail extends Component {
 		if( falzy( value ) ){
 			title = "";
 		}
+
+		align = wichevr( align, mjAttribute( "align" ) );
 
 		reverse = booleanize( wichevr( reverse, mjAttribute( "reverse" ) ) );
 

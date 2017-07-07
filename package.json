@@ -1,6 +1,6 @@
 {
   "name": "bh-mj-small-detail",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Biyaheroes MJML Small Detail Component.",
   "main": "small-detail.js",
   "support": "small-detail.support.js",
@@ -27,7 +27,7 @@
     "small",
     "detail",
     "component",
-    "bh-mj-small-detail-component"
+    "bh-mj-small-detail"
   ],
   "author": "Biyaheroes Developers <developers@biyaheroes.com>",
   "contributors": [
@@ -79,8 +79,8 @@
     "url-loader": "^0.5.9",
     "vinyl-paths": "^2.1.0",
     "watch": "^1.0.2",
-    "webpack": "^3.0.0",
-    "webpack-dev-server": "^2.5.0",
+    "webpack": "^3.1.0",
+    "webpack-dev-server": "^2.5.1",
     "yargs": "^8.0.2"
   }
 }
