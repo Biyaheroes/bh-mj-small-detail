@@ -1,35 +1,29 @@
 {
-  "name": "bh-mj-small-detail",
-  "version": "0.2.0",
-  "description": "Biyaheroes MJML Small Detail Component.",
-  "main": "small-detail.deploy.js",
-  "support": "small-detail.support.js",
-  "authors": [
-    "Biyaheroes Developers <developers@biyaheroes.com>",
-    "Robot Biyaheroes <robot@biyaheroes.com>",
-    "Richeve S. Bebedor <richeve.bebedor@gmail.com>"
-  ],
-  "license": "MIT",
-  "keywords": [
-    "biyheroes",
-    "mjml",
-    "small",
-    "detail",
-    "component",
-    "bh-mj-small-detail-component"
-  ],
-  "homepage": "https://github.com/Biyaheroes/bh-mj-small-detail",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "falzy": "^0.20.0",
-    "jquery": "^3.2.1",
-    "react": "^15.6.1",
-    "wichevr": "^0.10.0"
-  }
+	"name": "bh-mj-small-detail",
+	"version": "0.2.0",
+	"description": "Biyaheroes MJML Small Detail Component.",
+	"main": "small-detail.deploy.js",
+	"support": "small-detail.support.js",
+	"authors": [
+		"Biyaheroes Developers <developers@biyaheroes.com>",
+		"Robot Biyaheroes <robot@biyaheroes.com>",
+		"Richeve S. Bebedor <richeve.bebedor@gmail.com>"
+	],
+	"license": "MIT",
+	"keywords": [
+		"biyheroes",
+		"mjml",
+		"small",
+		"detail",
+		"component",
+		"bh-mj-small-detail-component"
+	],
+	"homepage": "https://github.com/Biyaheroes/bh-mj-small-detail",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	]
 }

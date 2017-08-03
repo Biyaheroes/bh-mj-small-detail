@@ -1,7 +1,0 @@
-<mjml>
-	<mj-body>
-		<mj-container>
-			<mj-small-detail title="Hello World" value="This is a normal value" padding="20px 20px 20px 20px" />
-		</mj-container>
-	</mj-body>
-</mjml>
