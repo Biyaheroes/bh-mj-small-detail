@@ -44,7 +44,7 @@
     "booleanize": "^0.1.0",
     "falzy": "^0.20.0",
     "jquery": "^3.2.1",
-    "mjml": "^3.3.3",
+    "mjml": "^4.0.0",
     "mjml-column": "^3.3.3",
     "mjml-core": "^3.3.3",
     "mjml-table": "^3.3.3",
